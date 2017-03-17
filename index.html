@@ -8,52 +8,65 @@
 <div class="wrapper">
     <h1 class="main_text">todos</h1>
     <div class="main_content">
-        <div class="add">
-            <img src="#" class="select_all_button">
-            <input type="text" class="add_task" placeholder="What needs to be done?">
+        <div class="task_add">
+            <button class="select_all_button"
+                    aria-label="Отметить все, как выполненные"></button>
+            <input type="text" class="add_task" placeholder="What needs to be done?"
+                   aria-label="Поле добавления todo">
+            <button class="task-item-remove"
+                    aria-label="Удалить todo"></button>
         </div>
 
         <ul class="tasks_list">
-            <li class="task">
-                <img src="#" class="task_check_button">
-                <a href="#" class="task_title">HTML</a>
-                <img src="#" class="task_close_button">
+            <li class="task-item">
+                <textarea class="task-item_text">HTML</textarea>
+                <input type="checkbox"
+                       class=“todo-item_unready-mark” aria-label="Пометить как выполненное"/>
+                <button class="task-item-remove"
+                        aria-label="Удалить todo"></button>
             </li>
 
-            <li class="task checked">
-                <img src="#" class="task_check_button">
-                <a href="#" class="task_title">CSS</a>
-                <img src="#" class="task_close_button">
+            <li class="task-item __ready">
+                <textarea class="task-item_text">CSS</textarea>
+                <input type="checkbox" checked="checked"
+                       class=“task-item_ready-mark” aria-label="Пометить как невыполненное"/>
             </li>
 
-            <li class="task">
-                <img src="#" class="task_check_button">
-                <a href="#" class="task_title">JS</a>
-                <img src="#" class="task_close_button">
+            <li class="task-item">
+                <textarea class="task-item_text">JS</textarea>
+                <input type="checkbox"
+                       class=“todo-item_unready-mark” aria-label="Пометить как выполненное"/>
+                <button class="task-item-remove"
+                        aria-label="Удалить todo"></button>
             </li>
 
-            <li class="task">
-                <img src="#" class="task_check_button">
-                <a href="#" class="task_title">JS tools</a>
-                <img src="#" class="task_close_button">
+            <li class="task-item">
+                <textarea class="task-item_text">JS tools</textarea>
+                <input type="checkbox"
+                       class=“todo-item_unready-mark” aria-label="Пометить как выполненное"/>
+                <button class="task-item-remove"
+                        aria-label="Удалить todo"></button>
             </li>
         </ul>
 
-        <nav class="footer">
-            <div class="nav_left">
-                <p class="nav">3 items left</p>
+
+        <div class="tasks-actions-bar">
+            <div class="tasks-actions-bar_counter"
+                 aria-label="Счетчик не сделанных todo">3 left</div>
+
+            <div class="tasks-filters">
+                <button class="tasks-filters __active" data-filter="all"
+                        aria-label="Фильтр: показать все">All</button>
+                <button class="tasks-filters" data-filter="ready"
+                        aria-label="Фильтр: показать выполненные">Ready</button>
+                <button class="tasks-filters"data-filter="unready"
+                        aria-label="Фильтр: показать невыполненные">Unready</button>
             </div>
 
-            <div class="nav_center">
-                <a href="#" class="nav active">All</a>
-                <a href="#" class="nav">Active</a>
-                <a href="#" class="nav">Completed</a>
-            </div>
-            
-            <div class="nav_right">
-                <a href="" class="nav">Clear completed</a>
-            </div>
-        </nav>
+            <button class="tasks-actions-bar_clear-completed">
+                Clear completed
+            </button>
+        </div>
     </div>
 </div>
 </body>
